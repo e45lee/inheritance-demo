@@ -11,7 +11,7 @@ private:
 
 public:
   Train(const std::string& from, const std::string& destination) :
-    from(from), destination(destination) {}
+    from(from), destination(destination), speed(0) {}
   void Stop() { speed = 0; }
   void Go() { speed = 60; }
   void PrintStatus() {

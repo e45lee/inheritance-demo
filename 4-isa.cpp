@@ -41,5 +41,6 @@ int main() {
   PassengerTrain t;
   Train *p = &t;
   p->Go();
+  p->PrintStatus();
   return 0;
 }

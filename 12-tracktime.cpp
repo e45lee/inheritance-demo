@@ -37,7 +37,7 @@ private:
 public:
   FreightTrain(const std::string& from, const std::string& destination, const std::string& cargo) :
     Train(from, destination), cargo(cargo) {}
-  int speedLimit() const { return 60; }
+  int speedLimit() const { return 80; }
 };
 
 class HighSpeedTrain : public Train {
@@ -46,7 +46,7 @@ private:
 public:
   HighSpeedTrain(const std::string& from, const std::string& destination, int passengers) :
     Train(from, destination), passengers(passengers) {}
-  int speedLimit() const { return 50; }
+  int speedLimit() const { return 500; }
 };
 
 void printTrackTime(Train *t, int tracklength) {

@@ -13,7 +13,7 @@ private:
   int passengers;
 public:
   PassengerTrain(std::string from, std::string destination, int passengers)
-    : from(from), destination(destination), passengers(passengers) {}
+    : from(from), destination(destination), passengers(passengers), speed(0) {}
 
   void Stop() { speed = 0; }
   void Go() { speed = 60; }
@@ -34,7 +34,7 @@ private:
   std::string cargo;
 public:
   FreightTrain(std::string from, std::string destination, std::string cargo)
-    : from(from), destination(destination), cargo(cargo) {}
+    : from(from), destination(destination), cargo(cargo), speed(0) {}
   void Stop() { speed = 0; }
   void Go() { speed = 60; }
   void PrintStatus() {
@@ -53,7 +53,7 @@ private:
   
 public:
   HighSpeedTrain(std::string from, std::string destination, int passengers)
-    : from(from), destination(destination), passengers(passengers) {}
+    : from(from), destination(destination), passengers(passengers), speed(0) {}
   void Stop() { speed = 0; }
   void Go() { speed = 60; }
   void PrintStatus() {

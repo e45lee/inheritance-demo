@@ -40,5 +40,6 @@ public:
 int main() {
   PassengerTrain t;
   t.Go();
+  t.PrintStatus();
   return 0;
 }
