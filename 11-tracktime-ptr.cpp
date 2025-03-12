@@ -12,14 +12,14 @@ private:
 public:
   Train(const std::string& from, const std::string& destination) :
     from(from), destination(destination) {}
-  virtual void Stop() { speed = 0; }
-  virtual void Go() { speed = 60; }
-  virtual void PrintStatus() {
+  void Stop() { speed = 0; }
+  void Go() { speed = 60; }
+  void PrintStatus() {
     cout << "Speed: " << speed << endl;
     cout << "From: " << from << endl;
     cout << "Destination: " << destination << endl;
   }
-  virtual int speedLimit() const { return 60; }
+  int speedLimit() const { return 60; }
 };
 
 class PassengerTrain : public Train {
@@ -57,7 +57,7 @@ void printTrackTime(Train *t, int tracklength) {
 }
 
 int main() {
-  PassengerTrain t {"Waterloo", "Toronto", 180};
+  PassengerTrain t {"Waterloo", "Toronto", 1000};
   printTrackTime(&t, 180);
   return 0;
 }

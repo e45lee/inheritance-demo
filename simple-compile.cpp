@@ -7,10 +7,10 @@ private:
   string from;
   string to;
 public:
-  int speedLimit() { return 60; }
-  void go() {}
+  int speedLimit();
 };
 
+int Train::speedLimit() { return 60; }
 int main() {
   Train* t = new Train();
   return t->speedLimit();
